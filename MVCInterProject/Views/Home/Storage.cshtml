@@ -1,0 +1,100 @@
+﻿@model IEnumerable<MVCInterProject.Models.Package>
+
+@{
+    ViewData["Title"] = "Storage";
+    var dbContext = new AW_TestContext();
+    var packageList = dbContext.Packages;
+    var shippingList = dbContext.Shippings;
+}
+
+@functions {
+    public void onSortingSelect(String typeOfSort)
+    {
+        switch(typeOfSort)
+        {
+            case "Open":
+                //wyswietlenie samych otwartych
+                break;
+            case "Closed":
+                //wyswietlenie samych zamknietych
+                break;
+            default:
+                //wyswietlenie wszystkich
+                break;
+        }
+    }
+
+    public String deletePackage(Package item)
+    {
+        var db = new AW_TestContext();
+        db.Remove(item);
+        db.SaveChanges();
+        return "huh";
+    }
+}
+
+<h1>Storage</h1>
+
+<select name = "Selector" onselect=onSortingSelect(value)>
+    <option value = "No">No sorting</option>
+    <option value = "Open">Sort by open</option>
+    <option value = "Closed">Sort by closed</option>
+</select>
+
+
+<asp:UpdatePanel>
+    <p>
+        <a asp-action="Create">Create New</a>
+    </p>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.PacName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.PacCreateDate)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.PacIsOpen)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.PacCloseDate)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.PacCity)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+    @foreach (var item in packageList) {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PacName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PacCreateDate)
+                </td>
+                <td>
+                    @Html.CheckBoxFor(modelItem => item.PacIsOpen)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PacCloseDate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PacCity)
+                </td>
+                <td>
+                    <a asp-action="EditPackage" asp-route-id="@item.PacId">Edit</a> |
+                    <a asp-action="EditShipping" asp-route-id="@item.PacId">Edit shipping</a> |
+                    <a asp-action="Details" asp-route-id="@item.PacId">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.PacId">Delete</a>
+                    @*<a onselect="@deletePackage(@item)">Delete</a>*@
+                </td>
+            </tr>
+    }
+        </tbody>
+    </table>
+
+</asp:UpdatePanel>

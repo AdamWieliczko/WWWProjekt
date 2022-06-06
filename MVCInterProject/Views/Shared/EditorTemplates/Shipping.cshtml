@@ -1,0 +1,42 @@
+﻿@model MVCInterProject.Models.Shipping
+@if (@Model.ToBeSaved == true)
+{
+    <input type="hidden" asp-for="@Model.ShiId" value="@Model.ShiId"/>
+    <input type="hidden" asp-for="@Model.ShiPackageId" value="@Model.ShiPackageId"/>
+    <input type="hidden" asp-for="@Model.IsInDb" value="@Model.IsInDb"/>
+    <tr>
+        <th>
+            <div class="form-group">
+                <h5>Shipping @Model.ShiId</h5>
+            </div>
+        </th>
+    </tr>
+    <tr>
+        <th>
+            <div class="form-group">
+                <label asp-for="@Model.ShiName" class="control-label"></label>
+                <input asp-for="@Model.ShiName" class="form-control" value="@Model.ShiName"/>
+                <span asp-validation-for="@Model.ShiName" class="text-danger"></span>
+            </div>
+        </th>
+    </tr>
+    <tr>
+        <th>
+            <div class="form-group">
+                <label asp-for="@Model.ShiAddress" class="control-label"></label>
+                <input asp-for="@Model.ShiAddress" class="form-control" value="@Model.ShiAddress"/>
+                <span asp-validation-for="@Model.ShiAddress" class="text-danger"></span>
+            </div>
+
+        </th>
+    </tr>
+    <tr>
+        <th>
+            <div class="form-group">
+                <label asp-for="@Model.ShiMass" class="control-label"></label>
+                <input asp-for="@Model.ShiMass" class="form-control" value="@Model.ShiMass"/>
+                <span asp-validation-for="@Model.ShiMass" class="text-danger"></span>
+            </div>
+        </th>
+    </tr>
+}

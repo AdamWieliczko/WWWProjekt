@@ -1,0 +1,59 @@
+﻿@model IEnumerable<MVCInterProject.Models.Shipping>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ShiName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ShiAddress)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ShiCreateDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ShiMass)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ShiPackage)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ShiName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ShiAddress)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ShiCreateDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ShiMass)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ShiPackage.PacId)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.ShiId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.ShiId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.ShiId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

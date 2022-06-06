@@ -1,0 +1,85 @@
+﻿@model MVCInterProject.Models.Package
+
+@{
+    ViewData["Title"] = "Package Manager";
+    //IEnumerable<Shipping> shippings = (ViewData["Shippings"] == null)? new List<Shipping>() : ViewData["Shippings"] as IEnumerable<Shipping>;
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="CreateOrEdit" id="form">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="PacId"/>
+            <div class="form-group">
+                <label asp-for="PacName" class="control-label"></label>
+                <input asp-for="PacName" class="form-control" />
+                <span asp-validation-for="PacName" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="PacIsOpen" /> @Html.DisplayNameFor(model => model.PacIsOpen)
+                </label>
+            </div>
+            <div class="form-group">
+                <label asp-for="PacCity" class="control-label"></label>
+                <input asp-for="PacCity" class="form-control" />
+                <span asp-validation-for="PacCity" class="text-danger"></span>
+            </div>
+            <input type="button" class="btn btn-primary" id="addShipping" value="Add Shipping">
+            
+            <div id="shippingsContainer">
+                @await Html.PartialAsync("RefreshShippings")
+            </div>
+            @if(@Model.Shippings == null)
+            {
+                <input type="hidden" asp-for="@Model.Shippings" value="new List<Shipping>()"/>
+            }
+        <div class="form-group">
+            <input type="submit" value="Save" class="btn btn-primary" />
+        </div>
+        <div>
+            <a asp-action="Index">Back to List</a>
+        </div>
+        </form>
+    </div>
+</div>
+
+<script>
+
+</script>
+
+@section Scripts {
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+
+        <script type="text/javascript">
+              $("#addShipping").click(function(){
+                $.ajax({
+                    async: true,
+                    data: $('#form').serialize(),
+                    type: "POST",
+                    url: "/Packages/AddShippingToPackage",
+                    success: function(partialView){
+                        $("#shippingsContainer").html(partialView);
+                    }});
+              });
+        </script>
+
+        <script type="text/javascript">
+             function refresh(shipping) {
+                 var index = $(shipping).data("shipping-index");
+                 $.ajax({
+                     async: true,
+                     type: "POST",
+                     data: $('#form').serialize() + "&index=" + index,
+                     url : '/Packages/RemoveShippingFromPackage',
+                     success: function (result) {
+                         $("#shippingsContainer").html(result);
+                     }
+                });
+              }; 
+        </script>
+}

@@ -1,0 +1,69 @@
+﻿@model IEnumerable<MVCInterProject.Models.Package>
+
+@{
+    ViewData["Title"] = "Storage";
+    var prevDisabled = ((int)ViewData["CurrentPage"] > 0) ? "" : "disabled";
+    var nextDisabled = ((decimal)ViewData["HowManyPages"] - 1 > (int)ViewData["CurrentPage"])? "": "disabled";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<p>
+    <a asp-action="CreateOrEdit">Create New</a>
+</p>
+
+<a asp-action="Index" asp-route-filterBy="" asp-route-currentPage="@ViewData["CurrentPage"]" class="btn btn-default">No filter</a>
+<a asp-action="Index" asp-route-filterBy="OnlyOpen" asp-route-currentPage="@ViewData["CurrentPage"]" class="btn btn-default">Only Open</a>
+<a asp-action="Index" asp-route-filterBy="OnlyClosed" asp-route-currentPage="@ViewData["CurrentPage"]" class="btn btn-default">Only Closed</a>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.PacName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PacCreateDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PacIsOpen)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PacCloseDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PacCity)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.PacName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PacCreateDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PacIsOpen)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PacCloseDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PacCity)
+            </td>
+            <td>
+                <a asp-action="CreateOrEdit" asp-route-id="@item.PacId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.PacId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.PacId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+
+<a asp-action="Index" asp-route-filterBy="@ViewData["Filter"]" asp-route-currentPage="@((int)(ViewData["CurrentPage"]) - 1)" class="btn btn-default @prevDisabled">Previous page</a>
+<a asp-action="Index" asp-route-filterBy="@ViewData["Filter"]" asp-route-currentPage="@((int)(ViewData["CurrentPage"]) + 1)" class="btn btn-default @nextDisabled">Next page</a>

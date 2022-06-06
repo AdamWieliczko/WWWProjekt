@@ -1,0 +1,67 @@
+﻿@model MVCInterProject.Models.Shipping
+
+<hr>
+<div class="row">
+    <div class="col-md-4">
+        <table>
+            <tbody>
+                    <tr></tr>
+                    <form asp-action="CreateOrEdit">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <input type="hidden" asp-for="ShiId"/>
+                    <input type="hidden" asp-for="ShiPackageId"/>
+                    <tr>
+                        <th>
+                            <div class="form-group">
+                                <h5>Shipping @Model.ShiId</h5>
+                            </div>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>
+                            <div class="form-group">
+                                <label asp-for="ShiName" class="control-label"></label>
+                                <input asp-for="ShiName" class="form-control" />
+                                <span asp-validation-for="ShiName" class="text-danger"></span>
+                            </div>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>
+                            <div class="form-group">
+                                <label asp-for="ShiAddress" class="control-label"></label>
+                                <input asp-for="ShiAddress" class="form-control" />
+                                <span asp-validation-for="ShiAddress" class="text-danger"></span>
+                            </div>
+
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>
+                            <div class="form-group">
+                                <label asp-for="ShiCreateDate" class="control-label"></label>
+                                <input asp-for="ShiCreateDate" class="form-control" />
+                                <span asp-validation-for="ShiCreateDate" class="text-danger"></span>
+                            </div>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>
+                            <div class="form-group">
+                                <label asp-for="ShiMass" class="control-label"></label>
+                                <input asp-for="ShiMass" class="form-control" />
+                                <span asp-validation-for="ShiMass" class="text-danger"></span>
+                            </div>
+                        </th>
+                    </tr>
+                    </form>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<hr>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
