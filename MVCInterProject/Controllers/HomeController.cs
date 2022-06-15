@@ -14,7 +14,7 @@ namespace MVCInterProject.Controllers
             _logger = logger;
             _context = new AW_TestContext();
         }
-
+        
         public IActionResult Index()
         {
             return View();
@@ -27,20 +27,23 @@ namespace MVCInterProject.Controllers
 
         public IActionResult Storage()
         {
-            //var db = new AW_TestContext();
             return View();
         }
 
-        public IActionResult Create()
+        public async Task<IActionResult> Create([Bind("PerId,PerName,PerPassword,PerIsAdmin")] Person person)
         {
-            return View();
+            if (ModelState.IsValid)
+            {
+                _context.Add(person);
+                await _context.SaveChangesAsync();
+            }
+            
+            return View("CorrectlyRegister");
         }
 
         public IActionResult SaveData()
         {
-            //_context.Update();
-            _context.SaveChanges();
-            return View("Storage");
+            return View();
         }
 
         public async Task<IActionResult> EditPackage(int packageId)

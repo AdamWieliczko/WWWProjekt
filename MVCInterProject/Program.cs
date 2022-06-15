@@ -12,6 +12,10 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<AW_TestContext>();
 
+//
+// TUTAJ GDZIES DODANIE ROL WRZUCIC
+//
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -31,6 +35,6 @@ app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Packages}/{action=Index}/{id?}");
+    pattern: "{controller=Home}/{action=Index}/{id?}");
 
 app.Run();

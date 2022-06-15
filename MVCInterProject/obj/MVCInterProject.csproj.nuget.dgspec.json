@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\a.wieliczko\\source\\repos\\MVCInterProject\\MVCInterProject\\MVCInterProject.csproj": {}
+    "G:\\WWW Projekt\\WWWProjekt\\MVCInterProject\\MVCInterProject.csproj": {}
   },
   "projects": {
-    "C:\\Users\\a.wieliczko\\source\\repos\\MVCInterProject\\MVCInterProject\\MVCInterProject.csproj": {
+    "G:\\WWW Projekt\\WWWProjekt\\MVCInterProject\\MVCInterProject.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\a.wieliczko\\source\\repos\\MVCInterProject\\MVCInterProject\\MVCInterProject.csproj",
+        "projectUniqueName": "G:\\WWW Projekt\\WWWProjekt\\MVCInterProject\\MVCInterProject.csproj",
         "projectName": "MVCInterProject",
-        "projectPath": "C:\\Users\\a.wieliczko\\source\\repos\\MVCInterProject\\MVCInterProject\\MVCInterProject.csproj",
-        "packagesPath": "C:\\Users\\a.wieliczko\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\a.wieliczko\\source\\repos\\MVCInterProject\\MVCInterProject\\obj\\",
+        "projectPath": "G:\\WWW Projekt\\WWWProjekt\\MVCInterProject\\MVCInterProject.csproj",
+        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+        "outputPath": "G:\\WWW Projekt\\WWWProjekt\\MVCInterProject\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\a.wieliczko\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -40,11 +40,15 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "EntityFramework": {
+              "target": "Package",
+              "version": "[6.4.4, )"
+            },
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[6.0.3, )"
+              "version": "[6.0.5, )"
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
@@ -79,7 +83,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.203\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     }

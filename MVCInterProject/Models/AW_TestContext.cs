@@ -18,13 +18,13 @@ namespace MVCInterProject.Models
 
         public virtual DbSet<Package> Packages { get; set; } = null!;
         public virtual DbSet<Shipping> Shippings { get; set; } = null!;
+        public virtual DbSet<Person> People { get; set; } = null!;
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)
             {
-#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
-                optionsBuilder.UseSqlServer("Server=SQL2019;Database=AW_Test;Trusted_Connection=True");
+                optionsBuilder.UseSqlServer(@"Server=DESKTOP-68KN1FC\SQLEXPRESS;Database=PackageProject;Trusted_Connection=True");
             }
         }
 
@@ -91,6 +91,28 @@ namespace MVCInterProject.Models
                     .WithMany(p => p.Shippings)
                     .HasForeignKey(d => d.ShiPackageId)
                     .HasConstraintName("FK__Shipping__SHI_Pa__267ABA7A");
+            });
+
+            modelBuilder.Entity<Person>(entity =>
+            {
+                entity.HasKey(e => e.PerId)
+                    .HasName("PK__Person__8FE383B353C293FB");
+
+                entity.ToTable("Person");
+
+                entity.Property(e => e.PerId).HasColumnName("PER_ID");
+
+                entity.Property(e => e.PerIsAdmin).HasColumnName("PER_IsAdmin");
+
+                entity.Property(e => e.PerName)
+                    .HasMaxLength(50)
+                    .IsUnicode(false)
+                    .HasColumnName("PER_Name");
+
+                entity.Property(e => e.PerPassword)
+                    .HasMaxLength(50)
+                    .IsUnicode(false)
+                    .HasColumnName("PER_Password");
             });
 
             OnModelCreatingPartial(modelBuilder);

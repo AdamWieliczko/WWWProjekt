@@ -19,6 +19,7 @@ namespace MVCInterProject.Controllers
             _context = context;
         }
 
+        [BasicAuthentication()]
         public async Task<IActionResult> Index(string filterBy = "", int currentPage = 0)
         {
             var packages = _context.Packages;
@@ -54,7 +55,7 @@ namespace MVCInterProject.Controllers
 
             if (currentPage >= howManyPages)
             {
-                return Redirect("./?filterBy=" + filterBy + "&currentPage=" + (howManyPages - 1)); //przekazywany typ filtrowania i ostatnia strona
+                return Redirect("Packages/?filterBy=" + filterBy + "&currentPage=" + (howManyPages - 1)); //przekazywany typ filtrowania i ostatnia strona
             }
 
             ViewData["HowManyPages"] = howManyPages;
@@ -103,6 +104,7 @@ namespace MVCInterProject.Controllers
             return View("CreateOrEdit", package);
         }
         
+        [BasicAuthentication()]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> AddShippingToPackage([Bind("PacId,PacName,PacCreateDate,PacIsOpen,PacCloseDate,PacCity,Shippings,ToBeSaved,IsInDb")] Package package)
@@ -118,6 +120,7 @@ namespace MVCInterProject.Controllers
             return PartialView("RefreshShippings", package);
         }
 
+        [BasicAuthentication()]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> RemoveShippingFromPackage([Bind("PacId,PacName,PacCreateDate,PacIsOpen,PacCloseDate,PacCity,Shippings,ToBeSaved,IsInDb")] Package package, int index)
@@ -126,6 +129,7 @@ namespace MVCInterProject.Controllers
             return PartialView("RefreshShippings", package);
         }
 
+        [BasicAuthentication()]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> CreateOrEdit([Bind("PacId,PacName,PacCreateDate,PacIsOpen,PacCloseDate,PacCity,Shippings,ToBeSaved,IsInDb")] Package package)
@@ -211,7 +215,7 @@ namespace MVCInterProject.Controllers
             return View(package);
         }
 
-
+        [BasicAuthentication()]
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)

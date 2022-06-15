@@ -1,10 +1,44 @@
 ﻿@model IEnumerable<MVCInterProject.Models.Package>
 
+<style>
+    body {
+	    background-color: #7D8CC4;
+    }
+</style>
+
 @{
     ViewData["Title"] = "Storage";
     var prevDisabled = ((int)ViewData["CurrentPage"] > 0) ? "" : "disabled";
     var nextDisabled = ((decimal)ViewData["HowManyPages"] - 1 > (int)ViewData["CurrentPage"])? "": "disabled";
 }
+
+<style>
+	.accordion {
+		background-color: #a300ff;
+		color: #444;
+		cursor: pointer;
+		padding: 5px;
+		width: 75px;
+		text-align: left;
+		border: none;
+		outline: none;
+		transition: 0.4s;
+	}
+
+	.active, .accordion:hover {
+		background-color: #a300ff;
+	}
+
+	.panel {
+		padding: 0 18px;
+		display: none;
+		overflow: hidden;
+	}
+
+    body {
+	    background-color: #7D8CC4;
+    }
+</style>
 
 <h1>@ViewData["Title"]</h1>
 
@@ -12,9 +46,9 @@
     <a asp-action="CreateOrEdit">Create New</a>
 </p>
 
-<a asp-action="Index" asp-route-filterBy="" asp-route-currentPage="@ViewData["CurrentPage"]" class="btn btn-default">No filter</a>
-<a asp-action="Index" asp-route-filterBy="OnlyOpen" asp-route-currentPage="@ViewData["CurrentPage"]" class="btn btn-default">Only Open</a>
-<a asp-action="Index" asp-route-filterBy="OnlyClosed" asp-route-currentPage="@ViewData["CurrentPage"]" class="btn btn-default">Only Closed</a>
+<a asp-action="Index" asp-route-filterBy="" asp-route-currentPage='@ViewData["CurrentPage"]' class="btn btn-default">No filter</a>
+<a asp-action="Index" asp-route-filterBy="OnlyOpen" asp-route-currentPage='@ViewData["CurrentPage"]' class="btn btn-default">Only Open</a>
+<a asp-action="Index" asp-route-filterBy="OnlyClosed" asp-route-currentPage='@ViewData["CurrentPage"]' class="btn btn-default">Only Closed</a>
 
 <table class="table">
     <thead>
@@ -55,11 +89,14 @@
             <td>
                 @Html.DisplayFor(modelItem => item.PacCity)
             </td>
-            <td>
-                <a asp-action="CreateOrEdit" asp-route-id="@item.PacId">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.PacId">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.PacId">Delete</a>
-            </td>
+	        <td>
+		        <button class="accordion">Options</button>
+		        <div class="panel">
+			        <a asp-action="CreateOrEdit" asp-route-id="@item.PacId">Edit</a> |
+			        <a asp-action="Details" asp-route-id="@item.PacId">Details</a> |
+			        <a asp-action="Delete" asp-route-id="@item.PacId">Delete</a>
+		        </div>
+	        </td>
         </tr>
 }
     </tbody>
@@ -67,3 +104,43 @@
 
 <a asp-action="Index" asp-route-filterBy="@ViewData["Filter"]" asp-route-currentPage="@((int)(ViewData["CurrentPage"]) - 1)" class="btn btn-default @prevDisabled">Previous page</a>
 <a asp-action="Index" asp-route-filterBy="@ViewData["Filter"]" asp-route-currentPage="@((int)(ViewData["CurrentPage"]) + 1)" class="btn btn-default @nextDisabled">Next page</a>
+
+
+@section Scripts {
+	<script>
+		var acc = document.getElementsByClassName("accordion");
+		var i;
+
+		for (i = 0; i < acc.length; i++) {
+			acc[i].addEventListener("click", function() {
+				this.classList.toggle("active");
+                
+				var panel = this.nextElementSibling;
+				if (panel.style.display === "block") {
+					panel.style.display = "none";
+				} else {
+					panel.style.display = "block";
+				}
+			});
+		} 
+	</script>
+
+    @* <script>
+		var acc = document.getElementsByClassName("ChangeColors");
+        var bul = false;
+	    acc[0].addEventListener("click", function() {
+            console.log(document.getElementsByTagName('body')[0].style.background);
+            if (bul) {
+                document.getElementsByTagName('body')[0].style.background = '#7D8CC4';
+                document.getElementsByTagName('body')[0].style.color = '#2F3432';
+                bul = false;
+            }
+            else {
+                document.getElementsByTagName('body')[0].style.background = '#8F3432';
+                document.getElementsByTagName('body')[0].style.color = '#7D8CC4';
+                bul = true;
+            }
+            console.log("mogu");
+        }); 
+	</script> *@
+}
