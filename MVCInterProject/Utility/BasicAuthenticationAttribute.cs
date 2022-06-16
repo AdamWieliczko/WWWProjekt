@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
 using MVCInterProject.Models;
 
@@ -5,9 +6,6 @@ namespace MVCInterProject{
 public class BasicAuthenticationAttribute : ActionFilterAttribute
     {
         private readonly AW_TestContext _context = new AW_TestContext();
-        public static string nickname;
-        public static string password;
-
 
         public BasicAuthenticationAttribute()
         {
@@ -16,11 +14,15 @@ public class BasicAuthenticationAttribute : ActionFilterAttribute
  
         public override void OnActionExecuting(ActionExecutingContext filterContext)
         {
-            
-            if (true) //sprawdzenie poprawnosci z bazy
+            var isAnyUserRegistered = _context.People
+            .Where(i => i.PerName.Equals(UsernameAndPassword.username) && i.PerPassword.Equals(UsernameAndPassword.password)).Any();
+
+            if (isAnyUserRegistered)
             {
                 return;
             }
+
+            filterContext.Result = new RedirectResult(string.Format("/Login",filterContext.HttpContext.Request.Path));
         }
     }
 }

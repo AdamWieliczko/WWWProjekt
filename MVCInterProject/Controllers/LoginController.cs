@@ -32,14 +32,18 @@ namespace MVCInterProject.Controllers
 
         public async Task<IActionResult> Create([Bind("PerName,PerPassword")] Person person)
         {
-            if (ModelState.IsValid)
+            UsernameAndPassword.username = person.PerName;
+            UsernameAndPassword.password = person.PerPassword;
+
+            var isAnyUserRegistered = _context.People.ToList()
+            .Where(i => i.PerName.Equals(UsernameAndPassword.username) && i.PerPassword.Equals(UsernameAndPassword.password)).Any();
+
+            if (isAnyUserRegistered)
             {
-                _context.Add(person);
-                await _context.SaveChangesAsync();
-                Console.WriteLine(_context.People);
+                return View("CorrectlyLogin");
             }
-            
-            return View("CorrectlyLogin");
+
+            return View("Index");
         }
 
         public IActionResult SaveData()

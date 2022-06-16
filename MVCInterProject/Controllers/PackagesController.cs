@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -18,6 +19,7 @@ namespace MVCInterProject.Controllers
         {
             _context = context;
         }
+
 
         [BasicAuthentication()]
         public async Task<IActionResult> Index(string filterBy = "", int currentPage = 0)
@@ -63,6 +65,8 @@ namespace MVCInterProject.Controllers
             return View(packagesList.Skip(howManyToSkip).Take(howManyForPage).ToList().OrderBy(model => model.PacId));
         }
 
+
+        [BasicAuthentication()]
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
@@ -82,6 +86,7 @@ namespace MVCInterProject.Controllers
             return View(package);
         }
 
+        [BasicAuthentication()]
         public async Task<IActionResult> CreateOrEdit(int? id)
         {
             if (id == null)

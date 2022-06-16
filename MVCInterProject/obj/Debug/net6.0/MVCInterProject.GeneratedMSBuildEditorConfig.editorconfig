@@ -8,121 +8,121 @@ build_property.PlatformNeutralAssembly =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = MVCInterProject
 build_property.RootNamespace = MVCInterProject
-build_property.ProjectDir = G:\WWW Projekt\WWWProjekt\MVCInterProject\
+build_property.ProjectDir = g:\WWW Projekt\WWWProjekt\MVCInterProject\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = G:\WWW Projekt\WWWProjekt\MVCInterProject
+build_property.MSBuildProjectDirectory = g:\WWW Projekt\WWWProjekt\MVCInterProject
 build_property._RazorSourceGeneratorDebug = 
 
-[G:/WWW Projekt/WWWProjekt/MVCInterProject/Views/Home/CorrectlyRegister.cshtml]
+[g:/WWW Projekt/WWWProjekt/MVCInterProject/Views/Home/CorrectlyRegister.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDb3JyZWN0bHlSZWdpc3Rlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[G:/WWW Projekt/WWWProjekt/MVCInterProject/Views/Home/Create.cshtml]
+[g:/WWW Projekt/WWWProjekt/MVCInterProject/Views/Home/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[G:/WWW Projekt/WWWProjekt/MVCInterProject/Views/Home/CreateOrEdit.cshtml]
+[g:/WWW Projekt/WWWProjekt/MVCInterProject/Views/Home/CreateOrEdit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDcmVhdGVPckVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[G:/WWW Projekt/WWWProjekt/MVCInterProject/Views/Home/Details.cshtml]
+[g:/WWW Projekt/WWWProjekt/MVCInterProject/Views/Home/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[G:/WWW Projekt/WWWProjekt/MVCInterProject/Views/Home/EditShipping.cshtml]
+[g:/WWW Projekt/WWWProjekt/MVCInterProject/Views/Home/EditShipping.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxFZGl0U2hpcHBpbmcuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[G:/WWW Projekt/WWWProjekt/MVCInterProject/Views/Home/Index.cshtml]
+[g:/WWW Projekt/WWWProjekt/MVCInterProject/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[G:/WWW Projekt/WWWProjekt/MVCInterProject/Views/Home/Storage.cshtml]
+[g:/WWW Projekt/WWWProjekt/MVCInterProject/Views/Home/Storage.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxTdG9yYWdlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[G:/WWW Projekt/WWWProjekt/MVCInterProject/Views/Login/CorrectlyLogin.cshtml]
+[g:/WWW Projekt/WWWProjekt/MVCInterProject/Views/Login/CorrectlyLogin.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cQ29ycmVjdGx5TG9naW4uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[G:/WWW Projekt/WWWProjekt/MVCInterProject/Views/Login/Index.cshtml]
+[g:/WWW Projekt/WWWProjekt/MVCInterProject/Views/Login/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[G:/WWW Projekt/WWWProjekt/MVCInterProject/Views/Packages/Create.cshtml]
+[g:/WWW Projekt/WWWProjekt/MVCInterProject/Views/Packages/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFja2FnZXNcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[G:/WWW Projekt/WWWProjekt/MVCInterProject/Views/Packages/CreateOrEdit.cshtml]
+[g:/WWW Projekt/WWWProjekt/MVCInterProject/Views/Packages/CreateOrEdit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFja2FnZXNcQ3JlYXRlT3JFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[G:/WWW Projekt/WWWProjekt/MVCInterProject/Views/Packages/Delete.cshtml]
+[g:/WWW Projekt/WWWProjekt/MVCInterProject/Views/Packages/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFja2FnZXNcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[G:/WWW Projekt/WWWProjekt/MVCInterProject/Views/Packages/Details.cshtml]
+[g:/WWW Projekt/WWWProjekt/MVCInterProject/Views/Packages/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFja2FnZXNcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[G:/WWW Projekt/WWWProjekt/MVCInterProject/Views/Packages/Index.cshtml]
+[g:/WWW Projekt/WWWProjekt/MVCInterProject/Views/Packages/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFja2FnZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[G:/WWW Projekt/WWWProjekt/MVCInterProject/Views/Shared/EditorTemplates/Shipping.cshtml]
+[g:/WWW Projekt/WWWProjekt/MVCInterProject/Views/Shared/EditorTemplates/Shipping.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVkaXRvclRlbXBsYXRlc1xTaGlwcGluZy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[G:/WWW Projekt/WWWProjekt/MVCInterProject/Views/Shared/Error.cshtml]
+[g:/WWW Projekt/WWWProjekt/MVCInterProject/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[G:/WWW Projekt/WWWProjekt/MVCInterProject/Views/Shared/RefreshShippings.cshtml]
+[g:/WWW Projekt/WWWProjekt/MVCInterProject/Views/Shared/RefreshShippings.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXFJlZnJlc2hTaGlwcGluZ3MuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[G:/WWW Projekt/WWWProjekt/MVCInterProject/Views/Shared/ShippingIndex.cshtml]
+[g:/WWW Projekt/WWWProjekt/MVCInterProject/Views/Shared/ShippingIndex.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXFNoaXBwaW5nSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[G:/WWW Projekt/WWWProjekt/MVCInterProject/Views/Shared/_CreateOrEditShippings.cshtml]
+[g:/WWW Projekt/WWWProjekt/MVCInterProject/Views/Shared/_CreateOrEditShippings.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9DcmVhdGVPckVkaXRTaGlwcGluZ3MuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[G:/WWW Projekt/WWWProjekt/MVCInterProject/Views/Shared/_ValidationScriptsPartial.cshtml]
+[g:/WWW Projekt/WWWProjekt/MVCInterProject/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[G:/WWW Projekt/WWWProjekt/MVCInterProject/Views/Shippings/Create.cshtml]
+[g:/WWW Projekt/WWWProjekt/MVCInterProject/Views/Shippings/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hpcHBpbmdzXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[G:/WWW Projekt/WWWProjekt/MVCInterProject/Views/Shippings/Delete.cshtml]
+[g:/WWW Projekt/WWWProjekt/MVCInterProject/Views/Shippings/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hpcHBpbmdzXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[G:/WWW Projekt/WWWProjekt/MVCInterProject/Views/Shippings/Details.cshtml]
+[g:/WWW Projekt/WWWProjekt/MVCInterProject/Views/Shippings/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hpcHBpbmdzXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[G:/WWW Projekt/WWWProjekt/MVCInterProject/Views/Shippings/Edit.cshtml]
+[g:/WWW Projekt/WWWProjekt/MVCInterProject/Views/Shippings/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hpcHBpbmdzXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[G:/WWW Projekt/WWWProjekt/MVCInterProject/Views/Test/Index.cshtml]
+[g:/WWW Projekt/WWWProjekt/MVCInterProject/Views/Test/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGVzdFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[G:/WWW Projekt/WWWProjekt/MVCInterProject/Views/_ViewImports.cshtml]
+[g:/WWW Projekt/WWWProjekt/MVCInterProject/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[G:/WWW Projekt/WWWProjekt/MVCInterProject/Views/_ViewStart.cshtml]
+[g:/WWW Projekt/WWWProjekt/MVCInterProject/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[G:/WWW Projekt/WWWProjekt/MVCInterProject/Views/Shared/_Layout.cshtml]
+[g:/WWW Projekt/WWWProjekt/MVCInterProject/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-8zbgvrtbch

@@ -15,6 +15,10 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = G:\WWW Projekt\WWWProjekt\MVCInterProject
 build_property._RazorSourceGeneratorDebug = 
 
+[G:/WWW Projekt/WWWProjekt/MVCInterProject/Views/Home/CorrectlyRegister.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDb3JyZWN0bHlSZWdpc3Rlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [G:/WWW Projekt/WWWProjekt/MVCInterProject/Views/Home/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -37,6 +41,14 @@ build_metadata.AdditionalFiles.CssScope =
 
 [G:/WWW Projekt/WWWProjekt/MVCInterProject/Views/Home/Storage.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxTdG9yYWdlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/WWW Projekt/WWWProjekt/MVCInterProject/Views/Login/CorrectlyLogin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cQ29ycmVjdGx5TG9naW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/WWW Projekt/WWWProjekt/MVCInterProject/Views/Login/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [G:/WWW Projekt/WWWProjekt/MVCInterProject/Views/Packages/Create.cshtml]
